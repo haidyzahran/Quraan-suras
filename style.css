@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    /* font-family: 'Tajawal', sans-serif; */
+    font-family: 'Amiri', serif;
+    /* font-family: 'Noto Naskh Arabic', serif; */
+    /* font-family: 'El Messiri', sans-serif; */
+    direction: rtl;
+}
+:root {
+    --main-color: #ff8716;
+    --p-color: #7b7b7b;
+    --bg-color: #F3F3F3;
+    --white-color: #fff;
+    --color-heading: #121416;
+    --border-color: #e5e5e5d5;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    background: var(--bg-color);
+}
+header {
+    display: flex;
+    justify-content: center;
+}
+header .container {
+    padding: 0 20px;
+    gap: 45px;
+    font-size: 15px;
+}
+.says {
+    color: #ff8716;
+}
+.hadeeth {
+    color: #07be84;
+}
+.doaa {
+    color: #7b7b7b;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 18px;
+}
+
+
+
+.container {
+    max-width: 990px;
+    font-family: 'Tajawal', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.sura {
+    width: 55px;
+    height: 55px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    font-size: 13px;
+    transition: .3s;
+}
+.sura:hover {
+    transform: scale(1.1);
+}
+.sura.active {
+    /* background: var(--main-color); */
+    color: #fff;
+    /* border: var(--main-color); */
+    box-shadow: 0 5px 8px var(--p-color);
+}
+
+
+
+/* ---- Popup ---- */
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+.popup {
+    background: var(--bg-color);
+    border-radius: 20px;
+    padding: 25px 30px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    width: 300px;
+    max-width: 90%;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+}
+.popup h3 {
+    color: var(--main-color);
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.popup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.popup button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.confirm {
+    background: #04b07a;
+    color: #fff;
+}
+.deny {
+    background: #8c8c8c;
+    color: #fff;
+}
+.confirm:hover {
+    background: #029164;
+}
+.deny:hover {
+    background: #7b7b7b;
+}
+@keyframes fadeIn {
+    from {opacity: 0; transform: scale(0.9);}
+    to {opacity: 1; transform: scale(1);}
+}
+
+
+/* ---- settings ---- */
+.setting-logo {
+    position: absolute;
+    width: calc(100% - 40px);
+    max-width: 900px;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.setting-logo i {
+    color: var(--main-color);
+    font-size: 28px;
+    cursor: pointer;
+}
+.setting-logo img {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+
+#popup-settings .popup {
+    width: 350px;  
+}
+#popup-settings .popup-inputs {
+    border-bottom: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+    margin: 10px;
+    padding: 30px 0;
+
+    /* display: flex;
+    flex-direction: column;
+    align-items: start; */
+    
+}
+#colorPicker {
+    cursor: pointer;
+    border: 2px solid #919191;
+}
+#popup-settings .popup-inputs .first {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--border-color);
+    gap: 5px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+#popup-settings .popup-inputs .first label {
+    color: #6d6d6d;
+    font-weight: 600;
+}
+#defaultColorBtn {
+    background: var(--main-color);
+    color: #fff;
+    margin-right: 20px;
+}
+#clearAllBtn {
+    background: #170e09;
+    color: #fff;
+}
