@@ -91,6 +91,15 @@ header .container {
     box-shadow: 0 5px 8px var(--p-color);
 }
 
+@media (max-width: 700px) {
+    .sura {
+        width: 42px;
+        height: 42px;
+        font-size: 11px;
+    }
+    
+}
+
 
 
 /* ---- Popup ---- */
