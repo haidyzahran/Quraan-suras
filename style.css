@@ -190,11 +190,6 @@ header .container {
     border-top: 1px solid var(--border-color);
     margin: 10px;
     padding: 30px 0;
-
-    /* display: flex;
-    flex-direction: column;
-    align-items: start; */
-    
 }
 #colorPicker {
     cursor: pointer;
@@ -221,4 +216,242 @@ header .container {
 #clearAllBtn {
     background: #170e09;
     color: #fff;
+}
+
+#settingsBtn i,
+#resetBtn i {
+    font-size: 21px;
+    color: #07be84;
+}
+
+
+/* --- Menu --- */
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -350px;
+    bottom: 0;
+    z-index: 1100;
+    background: var(--white-color);
+    border-left: 1px solid var(--border-color);
+    width: 350px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: .3s ease-in-out;
+}
+.menu.active {
+    left: 0;
+}
+.menu .top-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu .top-menu .close-menu i {
+    cursor: pointer;
+    font-size: 30px;
+    color: var(--main-color);
+}
+
+
+.menu .items-in-menu {
+    padding: 20px 0;
+    border-top: 1px solid var(--border-color);
+    margin-block: 20px;
+    height: 100%;
+}
+.menu .items-in-menu .item-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    margin: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background: var(--bg-color);
+    box-shadow: 0 3px 3px var(--p-color);
+    cursor: pointer;
+    color: var(--main-color);
+    font-weight: 500;
+    font-size: 22px;
+    transition: .3s;
+}
+.menu .items-in-menu .item-menu:hover {
+    box-shadow: 0 5px 8px var(--p-color);
+}
+
+
+
+@media (max-width: 500px) {
+
+    .menu {
+        width: 100%;
+        left: -100%;
+    }
+}
+
+
+
+
+
+
+/* ===== AZKAR PAGE ===== */
+/* header.azkar-header .container {
+    gap: 27px;
+} */
+header .container .azkar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 125px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background: var(--bg-color);
+    box-shadow: 0 5px 8px var(--p-color);
+    cursor: pointer;
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 20px;
+    transition: .3s;
+}
+
+header .container .azkar:hover {
+    background: #eaeaea;
+    border: 1px solid #eaeaea;
+}
+
+.azkar-items.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    padding-top: 40px;
+    border-top: 2px solid var(--border-color);
+}
+
+.azkar-items.active .zekr {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 8px var(--p-color);
+    background: #fff;
+    min-height: 60px;
+    padding: 40px 20px;
+    width: 300px;
+    margin-top: 20px;
+    cursor: pointer;
+    user-select: none;
+    flex-direction: column;
+}
+.azkar-items.active span {
+    position: absolute;
+    top: 0;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 8px var(--p-color);
+    background: var(--bg-color);
+    width: 44px;
+    height: 44px;
+    margin: -20px 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.azkar-items.active p {
+    /* color: #018e62; */
+    color: #07be84;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+.azkar-items {
+    display: none;
+}
+.azkar-items.active .zekr i {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 998;
+    color: var(--main-color);
+    font-size: 20px;
+    padding: 10px 8px 7px 40px;   
+    cursor: pointer;
+}
+.azkar-items.active .zekr .start-quran {
+    color: var(--p-color);
+    font-size: 12px;
+    padding-bottom: 7px;
+    width: 100%;
+    text-align: right;
+
+}
+/* #hadeethText {
+  white-space: pre-line;
+} */
+
+
+.azkar-header .azkar.active {
+    opacity: 0.6;
+    box-shadow: none;
+    border: none;
+    background: #eaeaea;
+    border: 1px solid #eaeaea;
+}
+.azkar-header .azkar.active p {
+    pointer-events: none; 
+}
+
+@media (max-width: 500px) {
+
+    .menu {
+        width: 100%;
+        left: -100%;
+    }
+    header.azkar-header .container {
+        gap: 27px;
+    }
+}
+
+
+
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
+}
+
+.zekr.shake {
+  animation: shake 0.2s;
+}
+
+
+/* * {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -webkit-focus-ring-color: rgba(0, 0, 0, 0) !important;
+  outline: none !important;
+} */
+
+/* هشيل الوميض الازرق لما بدوس عليه */
+.zekr, 
+.zekr * {
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
 }

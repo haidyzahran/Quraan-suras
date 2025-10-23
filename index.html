@@ -14,6 +14,10 @@
 </head>
 <body>
 
+      
+
+
+
     <header>
         <div class="container">
             <p> 
@@ -161,10 +165,11 @@
     <!-- settings -->
     <div class="setting-logo">
       <img src="nour.png" alt="">
-      <i id="settingsBtn" class="fa-solid fa-gear"></i>
+      <span onclick="open_close_menu()" class="close-menu"><i class="fa-solid fa-bars"></i></span>
       
-        
     </div>
+
+
 
     <div class="popup-overlay" id="popup-settings">
       <div class="popup">
@@ -186,6 +191,31 @@
       </div>
     </div>
     
+
+        <!-- --- Menu --- -->
+    <div class="menu">
+
+
+        <div class="top-menu">
+            <span id="settingsBtn" class="close-menu"><i class="fa-solid fa-gear"></i></span>
+            <span onclick="open_close_menu()" class="close-menu"><i class="fa-regular fa-circle-xmark"></i></span>
+
+          </div>
+    
+
+        <div class="items-in-menu" id="cart-items">
+
+          <a class="item-menu" href="index.html">الحفظ</a>
+          <a class="item-menu" href="azkar.html">الأذكار</a>
+
+        </div>
+
+    </div>
+
+
+
+
+
 
 
 
