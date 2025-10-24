@@ -449,9 +449,17 @@ header .container .azkar:hover {
 /* هشيل الوميض الازرق لما بدوس عليه */
 .zekr, 
 .zekr * {
-  -webkit-tap-highlight-color: transparent !important;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
 }
